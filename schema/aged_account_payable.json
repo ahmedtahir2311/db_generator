@@ -5,7 +5,7 @@
         "vendorId": {
             "type": "string",
             "required": true,
-            "ref": "Vendors.id",
+            "ref": "Vendor.id",
             "json": "$.vendorId",
             "desc": "Unique identifier for the vendor"
         },
@@ -19,14 +19,14 @@
         "vendorNumber": {
             "type": "string",
             "nullable": true,
-            "ref": "Vendors.number",
+            "ref": "Vendor.number",
             "json": "$.vendorNumber",
             "desc": "Vendor-specific number"
         },
         "name": {
             "type": "string",
             "nullable": true,
-            "ref": "Vendors.displayName",
+            "ref": "Vendor.displayName",
             "json": "$.name",
             "desc": "Display name of the vendor"
         },

@@ -249,14 +249,14 @@
         "paymentTermsId": {
             "type": "string",
             "nullable": true,
-            "ref": "PaymentTerms.id",
+            "ref": "Customers.paymentTermsId",
             "json": "$.paymentTermsId",
             "desc": "Identifier for the payment terms"
         },
         "shipmentMethodId": {
             "type": "string",
             "nullable": true,
-            "ref": "ShipmentMethods.id",
+            "ref": "Customers.shipmentMethodId",
             "json": "$.shipmentMethodId",
             "desc": "Identifier for the shipment method"
         },

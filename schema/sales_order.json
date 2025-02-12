@@ -11,7 +11,7 @@
         "company": {
             "type": "string",
             "required": true,
-            "ref": "Company.name",
+            "ref": "Companies.name",
             "json": "$.company",
             "desc": "The company associated with the sales order; references the Companies schema's name field"
         },
@@ -56,7 +56,7 @@
         "customerName": {
             "type": "string",
             "nullable": true,
-            "ref": "Customers.name",
+            "ref": "Customers.displayName",
             "json": "$.customerName",
             "desc": "Customer name; references the Customer schema's name field"
         },
@@ -83,7 +83,7 @@
         "shipToName": {
             "type": "string",
             "nullable": true,
-            "ref": "Customers.name",
+            "ref": "Customers.displayName",
             "json": "$.shipToName",
             "desc": "Name of the shipping destination"
         },

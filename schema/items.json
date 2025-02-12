@@ -116,12 +116,14 @@
         "generalProductPostingGroupId": {
             "type": "string",
             "nullable": true,
+            "ref": "GeneralProductPostingGroup.id",
             "json": "$.generalProductPostingGroupId",
             "desc": "Identifier for the general product posting group"
         },
         "generalProductPostingGroupCode": {
             "type": "string",
             "nullable": true,
+            "ref": "GeneralProductPostingGroup.code",
             "json": "$.generalProductPostingGroupCode",
             "desc": "Code for the general product posting group"
         },
