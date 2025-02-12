@@ -1,0 +1,83 @@
+{
+    "tableName": "AgedAccountsPayable",
+    "description": "Schema definition for Aged Accounts Payable that tracks vendor payment aging and outstanding balances across different time periods",
+    "properties": {
+        "vendorId": {
+            "type": "string",
+            "required": true,
+            "ref": "Vendors.id",
+            "json": "$.vendorId",
+            "desc": "Unique identifier for the vendor"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company associated with the payable"
+        },
+        "vendorNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Vendors.number",
+            "json": "$.vendorNumber",
+            "desc": "Vendor-specific number"
+        },
+        "name": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Vendors.displayName",
+            "json": "$.name",
+            "desc": "Display name of the vendor"
+        },
+        "currencyCode": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Currencies.code",
+            "json": "$.currencyCode",
+            "desc": "Currency code for the payable"
+        },
+        "balanceDue": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.balanceDue",
+            "desc": "Total balance due for the payable"
+        },
+        "currentAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.currentAmount",
+            "desc": "Amount payable for the current period"
+        },
+        "period1Amount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.period1Amount",
+            "desc": "Amount payable in period 1"
+        },
+        "period2Amount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.period2Amount",
+            "desc": "Amount payable in period 2"
+        },
+        "period3Amount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.period3Amount",
+            "desc": "Amount payable in period 3"
+        },
+        "agedAsOfDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.agedAsOfDate",
+            "desc": "Date as of which the aging calculation is performed"
+        },
+        "periodLengthFilter": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.periodLengthFilter",
+            "desc": "Filter representing the period length used in the aging calculation"
+        }
+    }
+}

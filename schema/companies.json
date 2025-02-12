@@ -1,0 +1,66 @@
+{
+    "tableName": "Companies",
+    "description": "Schema definition for Company entity that stores core company information",
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the company like a UUID"
+        },
+        "systemVersion": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.systemVersion",
+            "desc": "Version identifier for the company record (if applicable)"
+        },
+        "timestamp": {
+            "type": "int64",
+            "nullable": true,
+            "json": "$.timestamp",
+            "desc": "Timestamp representing when the record was last updated, in Int64 format"
+        },
+        "name": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.name",
+            "desc": "The official legal name of the company"
+        },
+        "displayName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.displayName",
+            "desc": "A user-friendly name for display purposes, like a username"
+        },
+        "businessProfileId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.businessProfileId",
+            "desc": "Identifier linking the company to its associated business profile"
+        },
+        "systemCreatedAt": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.systemCreatedAt",
+            "desc": "Datetime when the company record was created in the system"
+        },
+        "systemCreatedBy": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.systemCreatedBy",
+            "desc": "Identifier for the user or system process that created the record"
+        },
+        "systemModifiedAt": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.systemModifiedAt",
+            "desc": "Datetime when the company record was last modified"
+        },
+        "systemModifiedBy": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.systemModifiedBy",
+            "desc": "Identifier for the user or system process that last modified the record"
+        }
+    }
+}

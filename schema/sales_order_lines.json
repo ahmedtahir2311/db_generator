@@ -1,0 +1,224 @@
+{
+    "tableName": "SalesOrderLines",
+    "description": "Schema definition for Sales Order Line Items that stores detailed information about individual items within a sales order",
+    "properties": {
+        "id": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the sales line item (nullable)"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company associated with the sales line item; references the Companies schema's name field"
+        },
+        "salesOrderId": {
+            "type": "string",
+            "nullable": true,
+            "ref": "SalesOrders.id",
+            "json": "$.salesOrderId",
+            "desc": "Identifier for the related sales order"
+        },
+        "salesOrderNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "SalesOrders.number",
+            "json": "$.salesOrderNumber",
+            "desc": "Sales order number associated with the line item"
+        },
+        "salesOrderDate": {
+            "type": "date",
+            "nullable": true,
+            "ref": "SalesOrders.orderDate",
+            "json": "$.salesOrderDate",
+            "desc": "The date of the sales order associated with the line item"
+        },
+        "sequence": {
+            "type": "int32",
+            "nullable": true,
+            "json": "$.sequence",
+            "desc": "Sequence number of the line item within the sales order"
+        },
+        "itemId": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Items.id",
+            "json": "$.itemId",
+            "desc": "Identifier for the item being sold; references the Items schema's id field"
+        },
+        "lineType": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Items.type",
+            "json": "$.lineType",
+            "desc": "Type of the line item; references the Items schema's type field"
+        },
+        "lineObjectNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Items.number",
+            "json": "$.lineObjectNumber",
+            "desc": "Object number for the line item, used for further identification"
+        },
+        "description": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.description",
+            "desc": "Primary description of the sales line item"
+        },
+        "description2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.description2",
+            "desc": "Secondary description for the sales line item"
+        },
+        "unitOfMeasureId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.unitOfMeasureId",
+            "desc": "Identifier for the unit of measure used for the item"
+        },
+        "unitOfMeasureCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.unitOfMeasureCode",
+            "desc": "Code representing the unit of measure for the item"
+        },
+        "quantity": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.quantity",
+            "desc": "Quantity of the item in the sales line"
+        },
+        "unitPrice": {
+            "type": "float64",
+            "nullable": true,
+            "ref": "Items.unitPrice",
+            "json": "$.unitPrice",
+            "desc": "Unit price of the item"
+        },
+        "discountAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.discountAmount",
+            "desc": "Discount amount applied to the line item"
+        },
+        "discountPercent": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.discountPercent",
+            "desc": "Discount percentage applied to the line item"
+        },
+        "discountAppliedBeforeTax": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.discountAppliedBeforeTax",
+            "desc": "Indicates if the discount is applied before tax"
+        },
+        "amountExcludingTax": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.amountExcludingTax",
+            "desc": "Line item amount excluding tax"
+        },
+        "taxCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxCode",
+            "desc": "Tax code applicable to the line item"
+        },
+        "taxPercent": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.taxPercent",
+            "desc": "Tax percentage rate applied to the line item"
+        },
+        "totalTaxAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.totalTaxAmount",
+            "desc": "Total tax amount for the line item"
+        },
+        "amountIncludingTax": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.amountIncludingTax",
+            "desc": "Line item amount including tax"
+        },
+        "invoiceDiscountAllocation": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.invoiceDiscountAllocation",
+            "desc": "Allocation of invoice discount to this line item"
+        },
+        "netAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.netAmount",
+            "desc": "Net amount for the line item after discounts"
+        },
+        "netTaxAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.netTaxAmount",
+            "desc": "Net tax amount applicable to the line item"
+        },
+        "netAmountIncludingTax": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.netAmountIncludingTax",
+            "desc": "Net amount for the line item including tax"
+        },
+        "shipmentDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.shipmentDate",
+            "desc": "Shipment date for the line item"
+        },
+        "shippedQuantity": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.shippedQuantity",
+            "desc": "Quantity of the item that has been shipped"
+        },
+        "invoicedQuantity": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.invoicedQuantity",
+            "desc": "Quantity of the item that has been invoiced"
+        },
+        "invoiceQuantity": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.invoiceQuantity",
+            "desc": "Quantity of the item to be invoiced"
+        },
+        "shipQuantity": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.shipQuantity",
+            "desc": "Quantity of the item to be shipped"
+        },
+        "itemVariantId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.itemVariantId",
+            "desc": "Identifier for the variant of the item, if applicable"
+        },
+        "locationId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.locationId",
+            "desc": "Location identifier related to the line item"
+        },
+        "accountId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.accountId",
+            "desc": "Account identifier related to the line item"
+        }
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "tableName": "GeneralProductPostingGroups",
+    "description": "Defines the general product posting groups used for financial posting configurations in Business Central. These groups determine how transactions related to products are posted to different general ledger accounts and help maintain consistent financial recording across similar product types.",
+    "properties": {
+        "company": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company associated with the posting group; references the Companies schema's name field"
+        },
+        "id": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the general product posting group"
+        },
+        "code": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.code",
+            "desc": "Code identifier for the general product posting group"
+        },
+        "description": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.description",
+            "desc": "Description of the general product posting group"
+        },
+        "defaultVATProductPostingGroup": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.defaultVATProductPostingGroup",
+            "desc": "Default VAT product posting group associated with this posting group"
+        },
+        "autoInsertDefault": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.autoInsertDefault",
+            "desc": "Flag indicating if this posting group should be automatically inserted as default"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp when the general product posting group was last modified"
+        }
+    }
+}

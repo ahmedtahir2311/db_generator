@@ -1,0 +1,145 @@
+{
+    "tableName": "Vendor",
+    "description": "Schema definition for Vendor entity that stores comprehensive vendor information and their relationships",
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the vendor record"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "Name of the company associated with the vendor; references the Companies schema's name field"
+        },
+        "number": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.number",
+            "desc": "Vendor-specific number or code (if applicable)"
+        },
+        "displayName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.displayName",
+            "desc": "Display name for the vendor"
+        },
+        "addressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.addressLine1",
+            "desc": "Primary address line for the vendor's address"
+        },
+        "addressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.addressLine2",
+            "desc": "Secondary address line for the vendor's address (optional)"
+        },
+        "city": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.city",
+            "desc": "City where the vendor is located"
+        },
+        "state": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.state",
+            "desc": "State or region of the vendor's address"
+        },
+        "country": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.country",
+            "desc": "Country where the vendor operates or is based"
+        },
+        "postalCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.postalCode",
+            "desc": "Postal or ZIP code of the vendor's address"
+        },
+        "phoneNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.phoneNumber",
+            "desc": "Contact phone number for the vendor"
+        },
+        "email": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.email",
+            "desc": "Contact email address for the vendor"
+        },
+        "website": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.website",
+            "desc": "Website URL of the vendor"
+        },
+        "taxRegistrationNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxRegistrationNumber",
+            "desc": "Tax registration number associated with the vendor"
+        },
+        "currencyId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyId",
+            "desc": "Identifier for the currency associated with the vendor"
+        },
+        "currencyCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyCode",
+            "desc": "Currency code (e.g., USD, EUR) for the vendor"
+        },
+        "irs1099Code": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.irs1099Code",
+            "desc": "IRS 1099 code for the vendor (if applicable)"
+        },
+        "paymentTermsId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.paymentTermsId",
+            "desc": "Identifier for the payment terms agreed upon by the vendor"
+        },
+        "paymentMethodId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.paymentMethodId",
+            "desc": "Identifier for the default payment method for the vendor"
+        },
+        "taxLiable": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.taxLiable",
+            "desc": "Indicates if the vendor is subject to tax"
+        },
+        "blocked": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.blocked",
+            "desc": "Status flag indicating if the vendor is blocked or inactive"
+        },
+        "balance": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.balance",
+            "desc": "Current balance associated with the vendor's account"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp when the vendor record was last modified"
+        }
+    }
+}

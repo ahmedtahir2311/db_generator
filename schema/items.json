@@ -1,0 +1,149 @@
+{
+    "tableName": "Items",
+    "description": "Schema definition for Product Items that stores comprehensive product information and inventory details",
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the product item"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company name associated with the product item; references the Companies schema's name field"
+        },
+        "number": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.number",
+            "desc": "Optional product item number"
+        },
+        "displayName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.displayName",
+            "desc": "Primary display name for the product item"
+        },
+        "displayName2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.displayName2",
+            "desc": "Secondary display name for the product item (if applicable)"
+        },
+        "type": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.type",
+            "desc": "Type or classification of the product item"
+        },
+        "itemCategoryId": {
+            "type": "string",
+            "nullable": true,
+            "ref": "ItemCategory.id",
+            "json": "$.itemCategoryId",
+            "desc": "Identifier for the product item's category; references the Product Items Category schema's id field"
+        },
+        "itemCategoryCode": {
+            "type": "string",
+            "nullable": true,
+            "ref": "ItemCategory.code",
+            "json": "$.itemCategoryCode",
+            "desc": "Code for the product item's category; references the Product Items Category schema's code field"
+        },
+        "blocked": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.blocked",
+            "desc": "Flag indicating whether the product item is blocked or inactive"
+        },
+        "gtin": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.gtin",
+            "desc": "Global Trade Item Number (GTIN) for the product item"
+        },
+        "inventory": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.inventory",
+            "desc": "Available inventory quantity for the product item"
+        },
+        "unitPrice": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.unitPrice",
+            "desc": "Unit price of the product item"
+        },
+        "priceIncludesTax": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.priceIncludesTax",
+            "desc": "Indicates whether the unit price includes tax"
+        },
+        "unitCost": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.unitCost",
+            "desc": "Cost per unit for the product item"
+        },
+        "taxGroupId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxGroupId",
+            "desc": "Identifier for the tax group applicable to the product item"
+        },
+        "taxGroupCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxGroupCode",
+            "desc": "Code for the tax group of the product item"
+        },
+        "baseUnitOfMeasureId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.baseUnitOfMeasureId",
+            "desc": "Identifier for the base unit of measure used for the product item"
+        },
+        "baseUnitOfMeasureCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.baseUnitOfMeasureCode",
+            "desc": "Code representing the base unit of measure for the product item"
+        },
+        "generalProductPostingGroupId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.generalProductPostingGroupId",
+            "desc": "Identifier for the general product posting group"
+        },
+        "generalProductPostingGroupCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.generalProductPostingGroupCode",
+            "desc": "Code for the general product posting group"
+        },
+        "inventoryPostingGroupId": {
+            "type": "string",
+            "nullable": true,
+            "ref": "InventoryPostingGroup.id",
+            "json": "$.inventoryPostingGroupId",
+            "desc": "Identifier for the inventory posting group"
+        },
+        "inventoryPostingGroupCode": {
+            "type": "string",
+            "nullable": true,
+            "ref": "InventoryPostingGroup.code",
+            "json": "$.inventoryPostingGroupCode",
+            "desc": "Code for the inventory posting group"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp indicating when the product item was last modified"
+        }
+    }
+}

@@ -1,0 +1,157 @@
+{
+    "tableName": "Customers",
+    "description": "Schema definition for Customer entity that stores comprehensive customer information",
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the customer record"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company name associated with the customer; references the Companies schema's name field"
+        },
+        "number": {
+            "type": "string",
+            "required": true,
+            "json": "$.number",
+            "desc": "Customer identification number"
+        },
+        "displayName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.displayName",
+            "desc": "The display name used for the customer"
+        },
+        "type": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.type",
+            "desc": "Category or type of the customer"
+        },
+        "addressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.addressLine1",
+            "desc": "Primary address line for the customer's location"
+        },
+        "addressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.addressLine2",
+            "desc": "Secondary address line for the customer's location (optional)"
+        },
+        "city": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.city",
+            "desc": "City where the customer is located"
+        },
+        "state": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.state",
+            "desc": "State or region of the customer's address"
+        },
+        "country": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.country",
+            "desc": "Country for the customer's address"
+        },
+        "postalCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.postalCode",
+            "desc": "Postal or ZIP code of the customer's address"
+        },
+        "phoneNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.phoneNumber",
+            "desc": "Contact phone number for the customer"
+        },
+        "email": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.email",
+            "desc": "Contact email address for the customer"
+        },
+        "website": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.website",
+            "desc": "URL of the customer's website (if available)"
+        },
+        "taxLiable": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.taxLiable",
+            "desc": "Indicates whether the customer is tax liable"
+        },
+        "taxAreaId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxAreaId",
+            "desc": "Identifier for the customer's applicable tax area"
+        },
+        "taxAreaDisplayName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxAreaDisplayName",
+            "desc": "Display name for the customer's tax area"
+        },
+        "taxRegistrationNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.taxRegistrationNumber",
+            "desc": "Tax registration number associated with the customer"
+        },
+        "currencyId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyId",
+            "desc": "Identifier for the currency used by the customer"
+        },
+        "currencyCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyCode",
+            "desc": "Currency code (e.g., USD, EUR) associated with the customer"
+        },
+        "paymentTermsId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.paymentTermsId",
+            "desc": "Identifier for the payment terms agreed upon by the customer"
+        },
+        "shipmentMethodId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipmentMethodId",
+            "desc": "Identifier for the customer's preferred shipment method"
+        },
+        "paymentMethodId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.paymentMethodId",
+            "desc": "Identifier for the default payment method for the customer"
+        },
+        "blocked": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.blocked",
+            "desc": "Status flag indicating if the customer is blocked or inactive"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp of the last update made to the customer's record"
+        }
+    }
+}

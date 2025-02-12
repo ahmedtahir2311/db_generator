@@ -1,0 +1,257 @@
+{
+    "tableName": "SalesShipments",
+    "description": "Schema definition for Sales Shipments that stores comprehensive shipping information for sales orders",
+    "properties": {
+        "id": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the sales shipment"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company associated with the sales shipment"
+        },
+        "number": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.number",
+            "desc": "Sales shipment number"
+        },
+        "externalDocumentNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.externalDocumentNumber",
+            "desc": "External document number for the sales shipment"
+        },
+        "invoiceDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.invoiceDate",
+            "desc": "Invoice date for the sales shipment"
+        },
+        "postingDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.postingDate",
+            "desc": "Posting date for the sales shipment"
+        },
+        "dueDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.dueDate",
+            "desc": "Due date for the sales shipment"
+        },
+        "customerPurchaseOrderReference": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.customerPurchaseOrderReference",
+            "desc": "Reference for the customer's purchase order"
+        },
+        "customerNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.number",
+            "json": "$.customerNumber",
+            "desc": "Customer number associated with the shipment"
+        },
+        "customerName": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.displayName",
+            "json": "$.customerName",
+            "desc": "Customer name associated with the shipment"
+        },
+        "billToName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToName",
+            "desc": "Billing name for the shipment"
+        },
+        "billToCustomerNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.number",
+            "json": "$.billToCustomerNumber",
+            "desc": "Billing customer number for the shipment"
+        },
+        "shipToName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToName",
+            "desc": "Name of the shipping destination"
+        },
+        "shipToContact": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToContact",
+            "desc": "Shipping contact information"
+        },
+        "sellToAddressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToAddressLine1",
+            "desc": "Primary address line for the sell-to address in the shipment"
+        },
+        "sellToAddressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToAddressLine2",
+            "desc": "Secondary address line for the sell-to address in the shipment"
+        },
+        "sellToCity": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToCity",
+            "desc": "City for the sell-to address"
+        },
+        "sellToCountry": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToCountry",
+            "desc": "Country for the sell-to address"
+        },
+        "sellToState": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToState",
+            "desc": "State for the sell-to address"
+        },
+        "sellToPostCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToPostCode",
+            "desc": "Postal code for the sell-to address"
+        },
+        "billToAddressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToAddressLine1",
+            "desc": "Primary address line for the billing address"
+        },
+        "billToAddressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToAddressLine2",
+            "desc": "Secondary address line for the billing address"
+        },
+        "billToCity": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToCity",
+            "desc": "City for the billing address"
+        },
+        "billToCountry": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToCountry",
+            "desc": "Country for the billing address"
+        },
+        "billToState": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToState",
+            "desc": "State for the billing address"
+        },
+        "billToPostCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToPostCode",
+            "desc": "Postal code for the billing address"
+        },
+        "shipToAddressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToAddressLine1",
+            "desc": "Primary address line for the shipping address"
+        },
+        "shipToAddressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToAddressLine2",
+            "desc": "Secondary address line for the shipping address"
+        },
+        "shipToCity": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToCity",
+            "desc": "City for the shipping address"
+        },
+        "shipToCountry": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToCountry",
+            "desc": "Country for the shipping address"
+        },
+        "shipToState": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToState",
+            "desc": "State for the shipping address"
+        },
+        "shipToPostCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToPostCode",
+            "desc": "Postal code for the shipping address"
+        },
+        "currencyCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyCode",
+            "desc": "Currency code for the sales shipment"
+        },
+        "orderNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "SalesOrders.number",
+            "json": "$.orderNumber",
+            "desc": "Sales order number associated with the shipment"
+        },
+        "paymentTermsCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.paymentTermsCode",
+            "desc": "Payment terms code for the shipment"
+        },
+        "shipmentMethodCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipmentMethodCode",
+            "desc": "Shipment method code for the shipment"
+        },
+        "salesperson": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.salesperson",
+            "desc": "Salesperson handling the shipment"
+        },
+        "pricesIncludeTax": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.pricesIncludeTax",
+            "desc": "Indicates whether the prices include tax"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp when the sales shipment was last modified"
+        },
+        "phoneNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.phoneNumber",
+            "desc": "Contact phone number for the shipment"
+        },
+        "email": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.email",
+            "desc": "Contact email address for the shipment"
+        }
+    }
+}

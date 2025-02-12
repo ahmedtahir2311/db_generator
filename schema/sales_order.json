@@ -1,0 +1,327 @@
+{
+    "tableName": "SalesOrders",
+    "description": "Schema definition for Sales Orders that stores comprehensive order information including customer, billing, and shipping details",
+    "properties": {
+        "id": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the sales order"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Company.name",
+            "json": "$.company",
+            "desc": "The company associated with the sales order; references the Companies schema's name field"
+        },
+        "number": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.number",
+            "desc": "Sales order number"
+        },
+        "externalDocumentNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.externalDocumentNumber",
+            "desc": "External document number for the sales order"
+        },
+        "orderDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.orderDate",
+            "desc": "Date when the order was placed"
+        },
+        "postingDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.postingDate",
+            "desc": "Date when the order was posted"
+        },
+        "customerId": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.id",
+            "json": "$.customerId",
+            "desc": "Identifier for the customer; references the Customer schema's id field"
+        },
+        "customerNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.number",
+            "json": "$.customerNumber",
+            "desc": "Customer number; references the Customer schema's number field"
+        },
+        "customerName": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.name",
+            "json": "$.customerName",
+            "desc": "Customer name; references the Customer schema's name field"
+        },
+        "billToName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToName",
+            "desc": "Name to be billed on the sales order"
+        },
+        "billToCustomerId": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.id",
+            "json": "$.billToCustomerId",
+            "desc": "Customer identifier for the billing address"
+        },
+        "billToCustomerNumber": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.number",
+            "json": "$.billToCustomerNumber",
+            "desc": "Customer number for the billing address"
+        },
+        "shipToName": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Customers.name",
+            "json": "$.shipToName",
+            "desc": "Name of the shipping destination"
+        },
+        "shipToContact": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToContact",
+            "desc": "Shipping contact information"
+        },
+        "sellToAddressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToAddressLine1",
+            "desc": "Primary address line for the sell-to address"
+        },
+        "sellToAddressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToAddressLine2",
+            "desc": "Secondary address line for the sell-to address"
+        },
+        "sellToCity": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToCity",
+            "desc": "City for the sell-to address"
+        },
+        "sellToCountry": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToCountry",
+            "desc": "Country for the sell-to address"
+        },
+        "sellToState": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToState",
+            "desc": "State for the sell-to address"
+        },
+        "sellToPostCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.sellToPostCode",
+            "desc": "Postal code for the sell-to address"
+        },
+        "billToAddressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToAddressLine1",
+            "desc": "Primary address line for billing"
+        },
+        "billToAddressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToAddressLine2",
+            "desc": "Secondary address line for billing"
+        },
+        "billToCity": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToCity",
+            "desc": "City for the billing address"
+        },
+        "billToCountry": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToCountry",
+            "desc": "Country for the billing address"
+        },
+        "billToState": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToState",
+            "desc": "State for the billing address"
+        },
+        "billToPostCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.billToPostCode",
+            "desc": "Postal code for the billing address"
+        },
+        "shipToAddressLine1": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToAddressLine1",
+            "desc": "Primary address line for shipping"
+        },
+        "shipToAddressLine2": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToAddressLine2",
+            "desc": "Secondary address line for shipping"
+        },
+        "shipToCity": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToCity",
+            "desc": "City for the shipping address"
+        },
+        "shipToCountry": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToCountry",
+            "desc": "Country for the shipping address"
+        },
+        "shipToState": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToState",
+            "desc": "State for the shipping address"
+        },
+        "shipToPostCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipToPostCode",
+            "desc": "Postal code for the shipping address"
+        },
+        "shortcutDimension1Code": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shortcutDimension1Code",
+            "desc": "Code for the first shortcut dimension"
+        },
+        "shortcutDimension2Code": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shortcutDimension2Code",
+            "desc": "Code for the second shortcut dimension"
+        },
+        "currencyId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyId",
+            "desc": "Currency identifier for the sales order"
+        },
+        "currencyCode": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.currencyCode",
+            "desc": "Currency code for the sales order"
+        },
+        "pricesIncludeTax": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.pricesIncludeTax",
+            "desc": "Indicates whether the prices include tax"
+        },
+        "paymentTermsId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.paymentTermsId",
+            "ref": "Customers.paymentTermsId",
+            "desc": "Identifier for the payment terms"
+        },
+        "shipmentMethodId": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.shipmentMethodId",
+            "ref": "Customers.shipmentMethodId",
+            "desc": "Identifier for the shipment method"
+        },
+        "salesperson": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.salesperson",
+            "desc": "Salesperson handling the order"
+        },
+        "partialShipping": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.partialShipping",
+            "desc": "Indicates if partial shipping is permitted"
+        },
+        "requestedDeliveryDate": {
+            "type": "date",
+            "nullable": true,
+            "json": "$.requestedDeliveryDate",
+            "desc": "Requested delivery date for the order"
+        },
+        "discountAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.discountAmount",
+            "desc": "Discount amount applied to the order"
+        },
+        "discountAppliedBeforeTax": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.discountAppliedBeforeTax",
+            "desc": "Specifies if the discount is applied before tax"
+        },
+        "totalAmountExcludingTax": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.totalAmountExcludingTax",
+            "desc": "Total amount excluding tax"
+        },
+        "totalTaxAmount": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.totalTaxAmount",
+            "desc": "Total tax amount for the order"
+        },
+        "totalAmountIncludingTax": {
+            "type": "float64",
+            "nullable": true,
+            "json": "$.totalAmountIncludingTax",
+            "desc": "Total amount including tax"
+        },
+        "fullyShipped": {
+            "type": "boolean",
+            "nullable": true,
+            "json": "$.fullyShipped",
+            "desc": "Indicates whether the order has been fully shipped"
+        },
+        "status": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.status",
+            "desc": "Status of the sales order"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp when the sales order was last modified"
+        },
+        "phoneNumber": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.phoneNumber",
+            "desc": "Contact phone number for the sales order"
+        },
+        "email": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.email",
+            "desc": "Contact email address for the sales order"
+        }
+    }
+}

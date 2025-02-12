@@ -1,0 +1,37 @@
+{
+    "tableName": "ItemCategory",
+    "description": "Schema definition for Product Item Category entity that classifies and organizes product items",
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the product item category"
+        },
+        "company": {
+            "type": "string",
+            "required": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company name associated with the product item category; references the Companies schema's name field"
+        },
+        "code": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.code",
+            "desc": "Optional code for identifying the product item category"
+        },
+        "displayName": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.displayName",
+            "desc": "User-friendly display name for the product item category"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp when the product item category was last modified"
+        }
+    }
+}

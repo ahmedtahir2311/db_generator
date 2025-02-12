@@ -1,0 +1,37 @@
+{
+    "tableName": "InventoryPostingGroup",
+    "description": "Contains inventory posting group configurations and their associated metadata",
+    "properties": {
+        "id": {
+            "type": "string",
+            "required": true,
+            "json": "$.id",
+            "desc": "Unique identifier for the inventory posting group"
+        },
+        "code": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.code",
+            "desc": "Optional code for identifying the inventory posting group"
+        },
+        "company": {
+            "type": "string",
+            "nullable": true,
+            "ref": "Companies.name",
+            "json": "$.company",
+            "desc": "The company associated with the inventory posting group"
+        },
+        "description": {
+            "type": "string",
+            "nullable": true,
+            "json": "$.description",
+            "desc": "A description for the inventory posting group"
+        },
+        "lastModifiedDateTime": {
+            "type": "datetime",
+            "nullable": true,
+            "json": "$.lastModifiedDateTime",
+            "desc": "Timestamp when the inventory posting group was last modified"
+        }
+    }
+}
