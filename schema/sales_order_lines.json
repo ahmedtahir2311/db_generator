@@ -175,8 +175,9 @@
         "shipmentDate": {
             "type": "date",
             "nullable": true,
+            "ref": "SalesShipments.postingDate",
             "json": "$.shipmentDate",
-            "desc": "Shipment date for the line item"
+            "desc": "Shipment date for the line item, referencing the posting date of the corresponding SalesShipment"
         },
         "shippedQuantity": {
             "type": "float64",

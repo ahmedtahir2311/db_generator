@@ -30,26 +30,30 @@
         "invoiceDate": {
             "type": "date",
             "nullable": true,
+            "ref": "SalesOrders.orderDate",
             "json": "$.invoiceDate",
-            "desc": "Invoice date for the sales invoice"
+            "desc": "Invoice date for the sales invoice, corresponding to the SalesOrder's orderDate"
         },
         "postingDate": {
             "type": "date",
             "nullable": true,
+            "ref": "SalesOrders.postingDate",
             "json": "$.postingDate",
-            "desc": "Posting date for the sales invoice"
+            "desc": "Posting date for the sales invoice, derived from the SalesOrder's postingDate"
         },
         "dueDate": {
             "type": "date",
             "nullable": true,
+            "ref": "SalesOrders.requestedDeliveryDate",
             "json": "$.dueDate",
-            "desc": "Due date for the sales invoice"
+            "desc": "Due date for the sales invoice, aligned to the SalesOrder's requestedDeliveryDate"
         },
         "promisedPayDate": {
             "type": "date",
             "nullable": true,
+            "ref": "SalesOrders.requestedDeliveryDate",
             "json": "$.promisedPayDate",
-            "desc": "Promised payment date for the invoice"
+            "desc": "Promised payment date for the invoice, also aligned to the SalesOrder's requestedDeliveryDate"
         },
         "customerPurchaseOrderReference": {
             "type": "string",
